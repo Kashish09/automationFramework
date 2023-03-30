@@ -2,6 +2,7 @@ package pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -11,8 +12,10 @@ import java.util.Random;
 
 public class Product {
 
+    Actions actions;
     public Product(WebDriver driver){
         PageFactory.initElements(driver, this);
+        actions = new Actions(driver);
     }
 
     @FindBy(id = "search_product")
@@ -23,6 +26,9 @@ public class Product {
     List<WebElement> tshirtCollection;
     @FindBy(xpath = "//div[@id=\"cartModal\"]/descendant::div/descendant::button[@data-dismiss=\"modal\"]")
     WebElement continueShop;
+
+    @FindBy(xpath = "//div[@id=\"cartModal\"]")
+    WebElement continuePage;
     @FindBy(xpath = "//div[@id=\"cartModal\"]/descendant::div/descendant::a[contains(.,\"View Cart\")]")
     WebElement viewCart;
 
@@ -52,8 +58,13 @@ public class Product {
         Random r = new Random();
         int[] twoRandomNumbers = r.ints(2,0,6).toArray();
 
+        actions.moveToElement(tshirtCollection.get(twoRandomNumbers[0]));
         tshirtCollection.get(twoRandomNumbers[0]).click();
-        continueShop.click();
+
+
+        actions.moveToElement(continueShop);
+        actions.click(continueShop);
+        actions.moveToElement(tshirtCollection.get(twoRandomNumbers[1]));
         tshirtCollection.get(twoRandomNumbers[1]).click();
         viewCart.click();
     }
