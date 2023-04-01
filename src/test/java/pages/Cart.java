@@ -27,17 +27,18 @@ public class Cart {
     WebElement checkout;
     List<String> tshirtToRemoveFromCart = new ArrayList<>();
 
+
     public void deleteOneTshirtFromCart(){
         int cartSize = cartRows.size();
         Random r = new Random();
-        int[] twoRandomNumbers = r.ints(1,0,cartSize).toArray();
+        int tshirtRemoval = r.nextInt(cartSize);
 
-        String productIDComplete = cartRows.get(twoRandomNumbers[0]).getAttribute("id");
+        String productIDComplete = cartRows.get(tshirtRemoval).getAttribute("id");
         String[] splittingProductID = productIDComplete.split("-");
         productID = splittingProductID[1];
 //        deleteButton.click();
 
-        cartRows.get(twoRandomNumbers[0]).findElement(By.xpath("//descendant::tr/descendant::a[@data-product-id]")).click();
+        cartRows.get(tshirtRemoval).findElement(By.xpath("//descendant::tr/descendant::a[@data-product-id]")).click();
 
     }
 

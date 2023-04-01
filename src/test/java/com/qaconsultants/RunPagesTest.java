@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 //@formatter:off
 @CucumberOptions(  plugin = {"pretty"
-        , "html:target/features-report/qacToyotaAuto"
+        , "html:target/features-report/autoReport"
         , "json:target/cucumber_report/cucumber.json"
 }
         , features = {"src/test/resources/features"}

@@ -1,0 +1,31 @@
+17:46:04.940 847  [main] DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=111 in cache (valid until 18:21:53 01/04/2023 EDT)
+17:46:04.946 853  [main] DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome111=111.0.5563.64 in cache (valid until 15:16:37 02/04/2023 EDT)
+17:46:04.947 854  [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 111.0.5563.64 (resolved driver for Chrome 111)
+17:46:04.982 889  [main] DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 111.0.5563.64 found in cache
+17:46:04.984 891  [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\kkaswan\.cache\selenium\chromedriver\win32\111.0.5563.64\chromedriver.exe
+17:46:16.431 12338 [main] INFO  pages.LogIn - *****************************************************************
+17:46:16.431 12338 [main] INFO  pages.LogIn - Login Page entered
+17:46:16.571 12478 [main] INFO  pages.LogIn - Email entered
+17:46:16.689 12596 [main] INFO  pages.LogIn - Password entered
+17:46:19.759 15666 [main] INFO  pages.LogIn - Login Button clicked
+17:46:20.427 16334 [main] INFO  pages.Product - *****************************************************************
+17:46:20.429 16336 [main] INFO  pages.Product - Product Page entered
+17:46:23.212 19119 [main] INFO  pages.Product - Wrote product to be searched in search bar
+17:46:25.400 21307 [main] INFO  pages.Product - Clicked the search button on product page
+17:46:27.100 23007 [main] INFO  pages.Product - Added product in the cart
+17:46:28.929 24836 [main] INFO  pages.Product - Leaving product page
+17:46:28.929 24836 [main] INFO  pages.Product - *****************************************************************
+17:46:38.263 34170 [main] INFO  pages.Checkout - *****************************************************************
+17:46:38.264 34171 [main] INFO  pages.Checkout - Checkout Page entered
+17:46:39.418 35325 [main] INFO  pages.Checkout - Leaving Checkout Page
+17:46:39.419 35326 [main] INFO  pages.Checkout - *****************************************************************
+17:46:44.722 40629 [main] INFO  pages.Payment - *****************************************************************
+17:46:44.722 40629 [main] INFO  pages.Payment - Payment Page entered
+17:46:44.842 40749 [main] INFO  pages.Payment - Card Name entered
+17:46:44.964 40871 [main] INFO  pages.Payment - Card Number entered
+17:46:45.031 40938 [main] INFO  pages.Payment - Card CVC number entered
+17:46:45.123 41030 [main] INFO  pages.Payment - Card expiry month entered
+17:46:45.215 41122 [main] INFO  pages.Payment - Card expiry year entered
+17:46:47.473 43380 [main] INFO  pages.Payment - Pay and Confirm Button clicked
+17:46:47.474 43381 [main] INFO  pages.Payment - Payment Page end
+17:46:47.474 43381 [main] INFO  pages.Payment - *****************************************************************
