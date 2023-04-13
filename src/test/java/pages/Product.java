@@ -29,9 +29,11 @@ public class Product {
     WebElement searchProduct;
     @FindBy(id = "submit_search")
     WebElement searchClick;
-    @FindBy(xpath = "//div[@class=\"features_items\"]/descendant::div[@class=\"productinfo text-center\"]/descendant::a[@data-product-id]")
+//    @FindBy(xpath = "//div[@class=\"features_items\"]/descendant::div[@class=\"productinfo text-center\"]/descendant::a[@data-product-id]")
+    @FindBy(xpath = "//*[@class=\"productinfo text-center\"]//a[@data-product-id]")
     List<WebElement> tshirtCollection;
-    @FindBy(xpath = "//div[@id=\"cartModal\"]/descendant::div/descendant::button[@data-dismiss=\"modal\"]")
+//    @FindBy(xpath = "//div[@id=\"cartModal\"]/descendant::div/descendant::button[@data-dismiss=\"modal\"]")
+    @FindBy(xpath = "//button[@data-dismiss=\"modal\"]")
     WebElement continueShop;
 
     @FindBy(xpath = "//div[@id=\"cartModal\"]")

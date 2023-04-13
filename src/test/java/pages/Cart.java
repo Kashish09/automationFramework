@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -17,15 +16,16 @@ public class Cart {
     }
 
     String productID;
-    @FindBy(xpath = "//table[@id=\"cart_info_table\"]/descendant::tbody/descendant::tr")
+    @FindBy(xpath = "//table[@id=\"cart_info_table\"]//tbody//tr")
     List<WebElement> cartRows;
 
 //    @FindBy(xpath = "//table[@id=\"cart_info_table\"]/descendant::tbody/descendant::tr/descendant::a[@data-product-id=$productID]")
 //    WebElement deleteButton;
 
-    @FindBy(xpath = "//section[@id=\"do_action\"]/descendant::a[contains(.,\"Proceed To Checkout\")]")
+//    @FindBy(xpath = "//section[@id=\"do_action\"]/descendant::a[contains(.,\"Proceed To Checkout\")]")
+    @FindBy(xpath = "//a[contains(text(),\"Proceed To Checkout\")]")
     WebElement checkout;
-    List<String> tshirtToRemoveFromCart = new ArrayList<>();
+//    List<String> tshirtToRemoveFromCart = new ArrayList<>();
 
 
     public void deleteOneTshirtFromCart(){

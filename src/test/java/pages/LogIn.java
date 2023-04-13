@@ -24,10 +24,12 @@ public class LogIn {
     WebElement loginPassword;
     @FindBy(xpath = "//*[@data-qa='login-button']")
     WebElement loginLogInButton;
-    @FindBy(xpath = "//header[@id=\"header\"]/descendant::ul/descendant::li/descendant::a[contains(.,\"Logged in as\")]")
+//    @FindBy(xpath = "//header[@id=\"header\"]/descendant::ul/descendant::li/descendant::a[contains(.,\"Logged in as\")]")
+    @FindBy(xpath = "//*[contains(text(),\"Logged in as\")]")
     WebElement loginName;
 
-    @FindBy(xpath = "//header[contains(@id,'header')]/descendant::a[contains(.,'Products')]")
+//    @FindBy(xpath = "//header[contains(@id,'header')]/descendant::a[contains(.,'Products')]")
+    @FindBy(xpath = "//*[contains(text(),'Products')]")
     WebElement productPageLink;
     public void setLoginEmailAddress(String value) {
         log.info("*****************************************************************");

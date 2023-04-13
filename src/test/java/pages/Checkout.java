@@ -18,7 +18,8 @@ public class Checkout {
         wait = new WebDriverWait(driver, 10);
     }
 
-    @FindBy(xpath = "//section[@id=\"cart_items\"]/descendant::a[contains(@href,\"/payment\")]")
+//    @FindBy(xpath = "//section[@id=\"cart_items\"]/descendant::a[contains(@href,\"/payment\")]")
+    @FindBy(xpath = "//a[contains(@href,\"/payment\")]")
     WebElement order;
 
     public void placeTheOrder(){

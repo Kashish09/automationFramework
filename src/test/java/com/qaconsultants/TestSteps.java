@@ -1,25 +1,29 @@
 package com.qaconsultants;
 
 import Utils.BaseTests;
+import ch.qos.logback.classic.Logger;
+import io.cucumber.datatable.DataTable;
 import io.cucumber.java.After;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.slf4j.LoggerFactory;
 import pages.*;
 
 public class TestSteps{
 
+    static Logger log = (Logger) LoggerFactory.getLogger(TestSteps.class);
     private BaseTests driverManager = new BaseTests();
-    private LogIn login = new LogIn(driverManager.getDriver());
-    private Product product = new Product(driverManager.getDriver());
-    private Cart cart = new Cart(driverManager.getDriver());
+    private LogIn login;
+    private Product product;
+    private Cart cart;
 
-    private Checkout checkout = new Checkout(driverManager.getDriver());
+    private Checkout checkout;
 
-    private Payment payment = new Payment(driverManager.getDriver());
+    private Payment payment;
 
-    private OrderConfirmation orderConfirmation = new OrderConfirmation(driverManager.getDriver());
+    private OrderConfirmation orderConfirmation;
 
     private AdBlock adBlock = new AdBlock(driverManager.getDriver());
     @Given("user is on login page")
@@ -28,18 +32,20 @@ public class TestSteps{
         try {
             adBlock.closeAd();
         } catch (Exception e) {
-
+            log.info("*****************************************************************");
+            log.info("Error closing the ad: " + e);
+            log.info("*****************************************************************");
         }
         driverManager.launchApplication();
 
     }
 
     @When("user enters valid id and password")
-    public void user_enters_valid_id_and_password() {
+    public void user_enters_valid_id_and_password(DataTable userCredentials) {
 
-
-        login.setLoginEmailAddress("qwerty123@example.com");
-        login.setLoginPassword("qwerty123");
+        login = new LogIn(driverManager.getDriver());
+        login.setLoginEmailAddress(userCredentials.cell(0,0));
+        login.setLoginPassword(userCredentials.cell(0,1));
 
     }
 
@@ -55,7 +61,9 @@ public class TestSteps{
         try {
             adBlock.closeAd();
         } catch (Exception e) {
-
+            log.info("*****************************************************************");
+            log.info("Error closing the ad: " + e);
+            log.info("*****************************************************************");
         }
         String loggedUserName = login.loggedUserNameVisible();
         Assert.assertEquals(loggedUserName, "Logged in as qwerty123");
@@ -70,14 +78,17 @@ public class TestSteps{
     }
 
     @When("search tshirts")
-    public void search_tshirts() {
+    public void search_tshirts(DataTable searchItem) {
 
         try {
             adBlock.closeAd();
         } catch (Exception e) {
-
+            log.info("*****************************************************************");
+            log.info("Error closing the ad: " + e);
+            log.info("*****************************************************************");
         }
-        product.searchProductFromSearchBar("tshirts");
+        product = new Product(driverManager.getDriver());
+        product.searchProductFromSearchBar(searchItem.cell(0,0));
         product.clickSearchButton();
 
     }
@@ -95,8 +106,11 @@ public class TestSteps{
         try {
             adBlock.closeAd();
         } catch (Exception e) {
-
+            log.info("*****************************************************************");
+            log.info("Error closing the ad: " + e);
+            log.info("*****************************************************************");
         }
+        cart = new Cart(driverManager.getDriver());
         cart.deleteOneTshirtFromCart();
 
 
@@ -106,12 +120,14 @@ public class TestSteps{
     public void user_is_able_to_proceed_to_checkout_and_place_the_order() {
 
         cart.proceedToCheckout();
+        checkout = new Checkout(driverManager.getDriver());
         checkout.placeTheOrder();
 
     }
 
     @When("user is redirected to Payments page after placing order")
     public void user_is_redirected_to_payments_page_after_placing_order() {
+        payment = new Payment(driverManager.getDriver());
         String name = payment.getPageName();
         Assert.assertEquals(name, "Payment");
     }
@@ -122,7 +138,9 @@ public class TestSteps{
         try {
             adBlock.closeAd();
         } catch (Exception e) {
-
+            log.info("*****************************************************************");
+            log.info("Error closing the ad: " + e);
+            log.info("*****************************************************************");
         }
         payment.enterCardName();
         payment.enterCardNumer();
@@ -145,8 +163,11 @@ public class TestSteps{
         try {
             adBlock.closeAd();
         } catch (Exception e) {
-
+            log.info("*****************************************************************");
+            log.info("Error closing the ad: " + e);
+            log.info("*****************************************************************");
         }
+        orderConfirmation = new OrderConfirmation(driverManager.getDriver());
         orderConfirmation.downloadInvoice();
 
     }
@@ -159,7 +180,9 @@ public class TestSteps{
             try {
                 Thread.sleep(2000);
             } catch (InterruptedException e) {
-
+                log.info("*****************************************************************");
+                log.info("Error closing the webdriver: " + e);
+                log.info("*****************************************************************");
             }
             driverManager.getDriver().quit();
         }
