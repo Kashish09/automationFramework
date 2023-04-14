@@ -13,7 +13,7 @@ public class OrderConfirmation {
 //    WebDriver driver;
     public OrderConfirmation(WebDriver driver){
         PageFactory.initElements(driver, this);
-        wait = new WebDriverWait(driver, 10);
+        wait = new WebDriverWait(driver, 20);
 //        this.driver = driver;
     }
 

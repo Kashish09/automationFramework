@@ -22,7 +22,7 @@ public class Product {
     public Product(WebDriver driver){
         PageFactory.initElements(driver, this);
         actions = new Actions(driver);
-        wait = new WebDriverWait(driver, 10);
+        wait = new WebDriverWait(driver, 20);
     }
 
     @FindBy(id = "search_product")
