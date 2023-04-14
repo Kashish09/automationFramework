@@ -2,8 +2,8 @@ package Utils;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import java.util.concurrent.TimeUnit;
 
@@ -14,20 +14,20 @@ public class BaseTests {
     public WebDriver getDriver() {
         if (driver == null) {
             //Chrome WebDriver
-//            WebDriverManager.chromedriver().setup();
-//            ChromeOptions options = new ChromeOptions();
-//            options.addArguments("--incognito");
-//            driver = new ChromeDriver(options);
+            WebDriverManager.chromedriver().setup();
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--incognito");
+            driver = new ChromeDriver(options);
 
             //Edge WebDriver
 //            WebDriverManager.edgedriver().setup();
 //            driver = new EdgeDriver();
 
             //Firefox WebDriver
-            WebDriverManager.firefoxdriver().setup();
-            DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-            capabilities.setCapability("marionette",true);
-            driver = new FirefoxDriver();
+//            WebDriverManager.firefoxdriver().setup();
+//            DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+//            capabilities.setCapability("marionette",true);
+//            driver = new FirefoxDriver();
 
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
