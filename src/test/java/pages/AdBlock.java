@@ -5,18 +5,23 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class AdBlock {
 
     WebDriver driver;
+    WebDriverWait wait;
     public AdBlock(WebDriver driver){
         PageFactory.initElements(driver, this);
         this.driver = driver;
+        wait = new WebDriverWait(driver, 10);
     }
 
     @FindBy(xpath = "//iframe[contains(@name,'aswift') and contains(@style,'visibility: visible')]")
     WebElement frame;
     public void closeAd(){
+        wait.until(ExpectedConditions.visibilityOf(frame));
         if(frame.isDisplayed()){
             driver.switchTo().frame(frame);
             try{
