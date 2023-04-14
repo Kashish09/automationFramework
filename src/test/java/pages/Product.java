@@ -25,7 +25,7 @@ public class Product {
         PageFactory.initElements(driver, this);
         actions = new Actions(driver);
         this.driver = driver;
-        wait = new WebDriverWait(driver, 20);
+        wait = new WebDriverWait(driver, 10);
     }
 
     @FindBy(id = "search_product")

@@ -18,7 +18,7 @@ public class Payment {
     WebDriver driver;
     public Payment(WebDriver driver){
         PageFactory.initElements(driver, this);
-        wait = new WebDriverWait(driver, 20);
+        wait = new WebDriverWait(driver, 10);
         this.driver = driver;
 
     }

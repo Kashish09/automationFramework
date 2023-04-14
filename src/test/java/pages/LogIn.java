@@ -16,7 +16,7 @@ public class LogIn {
 
     public LogIn(WebDriver driver){
         PageFactory.initElements(driver, this);
-        wait = new WebDriverWait(driver, 20);
+        wait = new WebDriverWait(driver, 10);
     }
     @FindBy(name = "email")
     WebElement loginEmailAddress;

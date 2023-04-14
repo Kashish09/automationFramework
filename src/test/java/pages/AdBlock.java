@@ -15,7 +15,7 @@ public class AdBlock {
     public AdBlock(WebDriver driver){
         PageFactory.initElements(driver, this);
         this.driver = driver;
-        wait = new WebDriverWait(driver, 20);
+        wait = new WebDriverWait(driver, 10);
     }
 
     @FindBy(xpath = "//iframe[contains(@name,'aswift') and contains(@style,'visibility: visible')]")
