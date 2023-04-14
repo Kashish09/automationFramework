@@ -1,6 +1,7 @@
 package pages;
 
 import ch.qos.logback.classic.Logger;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -19,9 +20,11 @@ public class Product {
     static Logger log = (Logger) LoggerFactory.getLogger(Product.class);
     Actions actions;
     WebDriverWait wait;
+    WebDriver driver;
     public Product(WebDriver driver){
         PageFactory.initElements(driver, this);
         actions = new Actions(driver);
+        this.driver = driver;
         wait = new WebDriverWait(driver, 20);
     }
 
@@ -81,7 +84,9 @@ public class Product {
 
 
         actions.moveToElement(tshirtCollection.get(tshirt1));
-        tshirtCollection.get(tshirt1).click();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", tshirtCollection.get(tshirt1));
+//        tshirtCollection.get(tshirt1).click();
 
 
         wait.until(ExpectedConditions.visibilityOf(continueShop));
@@ -91,7 +96,8 @@ public class Product {
         wait.until(ExpectedConditions.visibilityOf(tshirtCollection.get(tshirt2)));
         actions.moveToElement(tshirtCollection.get(tshirt2));
 
-        tshirtCollection.get(tshirt2).click();
+        js.executeScript("arguments[0].click();", tshirtCollection.get(tshirt2));
+//        tshirtCollection.get(tshirt2).click();
         wait.until(ExpectedConditions.visibilityOf(viewCart));
         log.info("Added product in the cart");
         viewCart.click();
