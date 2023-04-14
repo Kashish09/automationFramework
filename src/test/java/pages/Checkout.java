@@ -1,6 +1,7 @@
 package pages;
 
 import ch.qos.logback.classic.Logger;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,8 +14,10 @@ public class Checkout {
 
     static Logger log = (Logger) LoggerFactory.getLogger(Checkout.class);
     WebDriverWait wait;
+    WebDriver driver;
     public Checkout(WebDriver driver){
         PageFactory.initElements(driver, this);
+        this.driver = driver;
         wait = new WebDriverWait(driver, 10);
     }
 
@@ -26,7 +29,9 @@ public class Checkout {
         log.info("*****************************************************************");
         log.info("Checkout Page entered");
         wait.until(ExpectedConditions.elementToBeClickable(order));
-        order.click();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", order);
+//        order.click();
         log.info("Leaving Checkout Page");
         log.info("*****************************************************************");
     }
