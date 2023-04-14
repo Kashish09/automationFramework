@@ -1,6 +1,7 @@
 package pages;
 
 import ch.qos.logback.classic.Logger;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -14,9 +15,11 @@ public class Payment {
     static Logger log = (Logger) LoggerFactory.getLogger(Payment.class);
 
     WebDriverWait wait;
+    WebDriver driver;
     public Payment(WebDriver driver){
         PageFactory.initElements(driver, this);
         wait = new WebDriverWait(driver, 20);
+        this.driver = driver;
 
     }
 
@@ -86,7 +89,9 @@ public class Payment {
 
     public void payAndConfirmButton(){
 //        Utils.WebElementWait.waitForElementToBeClickable(payAndConfirm);
-        payAndConfirm.click();
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].click();", payAndConfirm);
+//        payAndConfirm.click();
         log.info("Pay and Confirm Button clicked");
         log.info("Payment Page end");
         log.info("*****************************************************************");
