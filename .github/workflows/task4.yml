@@ -12,8 +12,8 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-      - name: Install Chrome
-        uses: browser-actions/setup-chrome@latest
+#      - name: Install Chrome
+#        uses: browser-actions/setup-chrome@latest
 #      - name: Install Java
 #        uses: actions/setup-java@v3
 #        with:
