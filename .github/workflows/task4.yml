@@ -20,6 +20,11 @@ jobs:
           distribution: 'oracle'
           java-version: '17'
           cache: maven
+
+      - name: Set up Maven
+        uses: stCarolas/setup-maven@v4.5
+        with:
+            maven-version: 3.8.2
 #      - name: Install Chrome
 #        run: |
 #          chmod +x ./script/InstallChrome.sh
