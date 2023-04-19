@@ -4,7 +4,7 @@ on:
     branches: [task4]
 jobs:
   run-tests:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     container:
       image: maven:latest
       volumes:
@@ -12,6 +12,14 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
+      - name: Install Java
+        uses: actions/setup-java@v2
+        with:
+          java-version: '17'
+      - name: Install Chrome
+        run: |
+          chmod +x ./scripts/InstallChrome.sh
+          ./scripts/InstallChrome.sh
       - name: Build with Maven
         run: mvn clean test
 
