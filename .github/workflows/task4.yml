@@ -1,0 +1,17 @@
+name: task4demo
+on:
+  push:
+    branches: [task4]
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    container:
+      image: maven:latest
+      volumes:
+        - {{github.workspace}}:/app
+    steps:
+      - name: Checkout repo
+      - uses: actions/checkout@v2
+      - name: Build with Maven
+        run: mvn clean test
+
