@@ -12,15 +12,17 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
+      - name: Install Chrome
+        uses: browser-actions/setup-chrome@latest
 #      - name: Install Java
 #        uses: actions/setup-java@v3
 #        with:
 #          distribution: 'oracle'
 #          java-version: '17'
-      - name: Install Chrome
-        run: |
-          chmod +x ./script/InstallChrome.sh
-          ./script/InstallChrome.sh
+#      - name: Install Chrome
+#        run: |
+#          chmod +x ./script/InstallChrome.sh
+#          ./script/InstallChrome.sh
       - name: Build with Maven
         run: mvn test
 
