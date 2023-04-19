@@ -5,22 +5,22 @@ on:
 jobs:
   run-tests:
     runs-on: ubuntu-latest
-    container:
-      image: openjdk:17
-      volumes:
-        - ${{github.workspace}}:/app
+#    container:
+#      image: openjdk:17
+#      volumes:
+#        - ${{github.workspace}}:/app
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-#      - name: Install Java
-#        uses: actions/setup-java@v3
-#        with:
-#          distribution: 'temurin'
-#          java-version: '17'
+      - name: Install Java
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
       - name: Install Chrome
         run: |
           chmod +x ./script/InstallChrome.sh
           ./script/InstallChrome.sh
       - name: Build with Maven
-        run: mvn clean test
+        run: mvn --batch-mode --update-snapshots package
 
