@@ -1,26 +1,52 @@
-name: task4demo
+#name: task4demo
+#on:
+#  push:
+#    branches: [task4]
+#jobs:
+#  run-tests:
+#    runs-on: ubuntu-latest
+##    container:
+##      image: openjdk:17
+##      volumes:
+##        - ${{github.workspace}}:/app
+#    steps:
+#      - name: Checkout repo
+#        uses: actions/checkout@v3
+#      - name: Install Java
+#        uses: actions/setup-java@v3
+#        with:
+#          distribution: 'temurin'
+#          java-version: '17'
+#      - name: Install Chrome
+#        run: |
+#          chmod +x ./script/InstallChrome.sh
+#          ./script/InstallChrome.sh
+#      - name: Build with Maven
+#        run: mvn --batch-mode --update-snapshots package
+
+name: Java CI with Maven
+
 on:
   push:
-    branches: [task4]
+    branches: [ "task4" ]
+
 jobs:
-  run-tests:
+  build:
+
     runs-on: ubuntu-latest
-#    container:
-#      image: openjdk:17
-#      volumes:
-#        - ${{github.workspace}}:/app
+
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v3
-      - name: Install Java
+      - uses: actions/checkout@v3
+      - name: Set up JDK 11
         uses: actions/setup-java@v3
         with:
+          java-version: '11'
           distribution: 'temurin'
-          java-version: '17'
-      - name: Install Chrome
-        run: |
-          chmod +x ./script/InstallChrome.sh
-          ./script/InstallChrome.sh
+          cache: maven
       - name: Build with Maven
-        run: mvn --batch-mode --update-snapshots package
+        run: mvn -B test --file pom.xml
+
+      # Optional: Uploads the full dependency graph to GitHub to improve the quality of Dependabot alerts this repository can receive
+      - name: Update dependency graph
+        uses: advanced-security/maven-dependency-submission-action@571e99aab1055c2e71a1e2309b9691de18d6b7d6
 
