@@ -8,7 +8,7 @@ jobs:
     container:
       image: maven:latest
       volumes:
-        - {{github.workspace}}:/app
+        - ${{github.workspace}}:/app
     steps:
       - name: Checkout repo
         uses: actions/checkout@v2
