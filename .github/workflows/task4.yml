@@ -15,6 +15,7 @@ jobs:
       - name: Install Java
         uses: actions/setup-java@v2
         with:
+          distribution: 'oracle'
           java-version: '17'
       - name: Install Chrome
         run: |
