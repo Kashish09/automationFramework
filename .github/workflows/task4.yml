@@ -4,7 +4,7 @@ on:
     branches: [task4]
 jobs:
   run-tests:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 #    container:
 #      image: maven:3.8.3-openjdk-17
 #      volumes:
@@ -20,12 +20,6 @@ jobs:
           distribution: 'oracle'
           java-version: '17'
           cache: maven
-
-      - name: Setup Maven Action
-        uses: s4u/setup-maven-action@< version >
-        with:
-          java-version: 8
-          maven-version: '3.9.0'
 #      - name: Install Chrome
 #        run: |
 #          chmod +x ./script/InstallChrome.sh
