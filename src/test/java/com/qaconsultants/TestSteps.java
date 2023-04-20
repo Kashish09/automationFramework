@@ -33,7 +33,7 @@ public class TestSteps{
             adBlock.closeAd();
         } catch (Exception e) {
             log.info("*****************************************************************");
-            log.info("Error closing the ad: " + e);
+            log.info("No ad displayed: " + e);
             log.info("*****************************************************************");
         }
         driverManager.launchApplication();
@@ -62,7 +62,7 @@ public class TestSteps{
             adBlock.closeAd();
         } catch (Exception e) {
             log.info("*****************************************************************");
-            log.info("Error closing the ad: " + e);
+            log.info("No ad displayed: " + e);
             log.info("*****************************************************************");
         }
         String loggedUserName = login.loggedUserNameVisible();
@@ -84,7 +84,7 @@ public class TestSteps{
             adBlock.closeAd();
         } catch (Exception e) {
             log.info("*****************************************************************");
-            log.info("Error closing the ad: " + e);
+            log.info("No ad displayed: " + e);
             log.info("*****************************************************************");
         }
         product = new Product(driverManager.getDriver());
@@ -107,7 +107,7 @@ public class TestSteps{
             adBlock.closeAd();
         } catch (Exception e) {
             log.info("*****************************************************************");
-            log.info("Error closing the ad: " + e);
+            log.info("No ad displayed: " + e);
             log.info("*****************************************************************");
         }
         cart = new Cart(driverManager.getDriver());
@@ -139,7 +139,7 @@ public class TestSteps{
             adBlock.closeAd();
         } catch (Exception e) {
             log.info("*****************************************************************");
-            log.info("Error closing the ad: " + e);
+            log.info("No ad displayed: " + e);
             log.info("*****************************************************************");
         }
         payment.enterCardName();
@@ -164,7 +164,7 @@ public class TestSteps{
             adBlock.closeAd();
         } catch (Exception e) {
             log.info("*****************************************************************");
-            log.info("Error closing the ad: " + e);
+            log.info("No ad displayed: " + e);
             log.info("*****************************************************************");
         }
         orderConfirmation = new OrderConfirmation(driverManager.getDriver());

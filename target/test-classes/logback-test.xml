@@ -9,7 +9,9 @@
         <append>true</append>
         <encoder>
             <pattern>%d{HH:mm:ss.SSS} %-4relative [%thread] %-5level %logger{35} - %msg%n</pattern>
-            <maxFileSize>2MB</maxFileSize>
+            <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+                <maxFileSize>5MB</maxFileSize>
+            </triggeringPolicy>
             <filter class="ch.qos.logback.classic.filter.ThresholdFilter">
                 <level>ERROR</level>
                 <level>INFO</level>
@@ -18,6 +20,8 @@
         </encoder>
     </appender>
     <logger name="com.qaconsultants.logback" level="INFO" />
+    <logger name="org.apache" level="WARN" />
+    <logger name="httpclient" level="WARN" />
     <root level="debug">
         <appender-ref ref="STDOUT" />
         <appender-ref ref="FILE" />
