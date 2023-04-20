@@ -25,10 +25,8 @@ jobs:
 #          chmod +x ./script/InstallChrome.sh
 #          ./script/InstallChrome.sh
       - uses: ./
-        with:
-          maven-version: '3.8.7'
       - name: Build with Maven
-        run: mvn -Dtest=RunPagesTest test
+        run: mvn clean test
 
 #name: Java CI with Maven
 #
