@@ -16,7 +16,7 @@ public class BaseTests {
             //Chrome WebDriver
             WebDriverManager.chromedriver().setup();
             ChromeOptions options = new ChromeOptions();
-            options.addArguments("--incognito");
+            options.addArguments("--headless");
             driver = new ChromeDriver(options);
 
             //Edge WebDriver
