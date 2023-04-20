@@ -21,10 +21,11 @@ jobs:
           java-version: '17'
           cache: maven
 
-      - name: Set up Maven
-        uses: stCarolas/setup-maven@v4.5
+      - name: Setup Maven Action
+        uses: s4u/setup-maven-action@v4.5
         with:
-            maven-version: 3.8.2
+          java-version: 8
+          maven-version: '3.9.0'
 #      - name: Install Chrome
 #        run: |
 #          chmod +x ./script/InstallChrome.sh
