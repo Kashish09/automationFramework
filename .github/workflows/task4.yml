@@ -8,7 +8,7 @@ jobs:
     container:
       image: maven:3.8.3-openjdk-17
       volumes:
-        - ${{github.workspace}}:/app
+        - ${{github.workspace}}:/.
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
