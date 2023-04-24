@@ -53,3 +53,107 @@
 14:50:31.551 116851 [main] INFO  com.qaconsultants.TestSteps - *****************************************************************
 14:50:31.552 116852 [main] INFO  com.qaconsultants.TestSteps - No ad displayed: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //iframe[contains(@name,'aswift') and contains(@style,'visibility: visible')]' (tried for 10 second(s) with 500 milliseconds interval)
 14:50:31.552 116852 [main] INFO  com.qaconsultants.TestSteps - *****************************************************************
+10:26:44.182 1034 [main] DEBUG i.g.b.wdm.cache.ResolutionCache - Removing resolution chrome=112 from cache (expired on Fri Apr 21 10:31:06 EDT 2023)
+10:26:44.650 1502 [main] DEBUG i.g.b.wdm.versions.VersionDetector - Detecting chrome version using online commands.properties
+10:26:44.655 1507 [main] DEBUG i.g.bonigarcia.wdm.versions.Shell - Running command on the shell: [cmd.exe, /C, wmic, datafile, where, name="%PROGRAMFILES:\=\\%\\Google\\Chrome\\Application\\chrome.exe", get, Version, /value]
+10:26:45.206 2058 [main] DEBUG i.g.bonigarcia.wdm.versions.Shell - Result: Version=112.0.5615.138
+10:26:45.209 2061 [main] DEBUG i.g.b.wdm.cache.ResolutionCache - Removing resolution chrome112=112.0.5615.49 from cache (expired on Fri Apr 21 14:48:37 EDT 2023)
+10:26:45.378 2230 [main] DEBUG i.g.b.wdm.versions.VersionDetector - Latest version of chromedriver according to https://chromedriver.storage.googleapis.com/LATEST_RELEASE_112 is 112.0.5615.49
+10:26:45.379 2231 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 112.0.5615.49 (resolved driver for Chrome 112)
+10:26:45.383 2235 [main] DEBUG i.g.b.wdm.cache.ResolutionCache - Storing resolution chrome=112 in cache (valid until 11:26:45 24/04/2023 EDT)
+10:26:45.387 2239 [main] DEBUG i.g.b.wdm.cache.ResolutionCache - Storing resolution chrome112=112.0.5615.49 in cache (valid until 10:26:45 25/04/2023 EDT)
+10:26:45.418 2270 [main] DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 112.0.5615.49 found in cache
+10:26:45.419 2271 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\kkaswan\.cache\selenium\chromedriver\win32\112.0.5615.49\chromedriver.exe
+10:27:05.590 22442 [main] INFO  com.qaconsultants.TestSteps - *****************************************************************
+10:27:05.591 22443 [main] INFO  com.qaconsultants.TestSteps - No ad displayed: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //iframe[contains(@name,'aswift') and contains(@style,'visibility: visible')]' (tried for 10 second(s) with 500 milliseconds interval)
+10:27:05.592 22444 [main] INFO  com.qaconsultants.TestSteps - *****************************************************************
+10:27:09.357 26209 [main] INFO  pages.LogIn - *****************************************************************
+10:27:09.357 26209 [main] INFO  pages.LogIn - Login Page entered
+10:27:09.462 26314 [main] INFO  pages.LogIn - Email entered
+10:27:09.529 26381 [main] INFO  pages.LogIn - Password entered
+10:27:11.175 28027 [main] INFO  pages.LogIn - Login Button clicked
+10:27:26.846 43698 [main] INFO  com.qaconsultants.TestSteps - *****************************************************************
+10:27:26.846 43698 [main] INFO  com.qaconsultants.TestSteps - No ad displayed: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //iframe[contains(@name,'aswift') and contains(@style,'visibility: visible')]' (tried for 10 second(s) with 500 milliseconds interval)
+10:27:26.846 43698 [main] INFO  com.qaconsultants.TestSteps - *****************************************************************
+10:27:44.318 61170 [main] INFO  com.qaconsultants.TestSteps - *****************************************************************
+10:27:44.319 61171 [main] INFO  com.qaconsultants.TestSteps - No ad displayed: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //iframe[contains(@name,'aswift') and contains(@style,'visibility: visible')]' (tried for 10 second(s) with 500 milliseconds interval)
+10:27:44.319 61171 [main] INFO  com.qaconsultants.TestSteps - *****************************************************************
+10:27:44.329 61181 [main] INFO  pages.Product - *****************************************************************
+10:27:44.330 61182 [main] INFO  pages.Product - Product Page entered
+10:27:44.443 61295 [main] INFO  pages.Product - Wrote product to be searched in search bar
+10:27:47.828 64680 [main] INFO  pages.Product - Clicked the search button on product page
+10:27:49.435 66287 [main] INFO  pages.Product - Added product in the cart
+10:27:50.661 67513 [main] INFO  pages.Product - Leaving product page
+10:27:50.661 67513 [main] INFO  pages.Product - *****************************************************************
+10:28:06.288 83140 [main] INFO  com.qaconsultants.TestSteps - *****************************************************************
+10:28:06.289 83141 [main] INFO  com.qaconsultants.TestSteps - No ad displayed: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //iframe[contains(@name,'aswift') and contains(@style,'visibility: visible')]' (tried for 10 second(s) with 500 milliseconds interval)
+10:28:06.290 83142 [main] INFO  com.qaconsultants.TestSteps - *****************************************************************
+10:28:07.239 84091 [main] INFO  pages.Checkout - *****************************************************************
+10:28:07.239 84091 [main] INFO  pages.Checkout - Checkout Page entered
+10:28:08.216 85068 [main] INFO  pages.Checkout - Leaving Checkout Page
+10:28:08.216 85068 [main] INFO  pages.Checkout - *****************************************************************
+10:28:23.922 100774 [main] INFO  com.qaconsultants.TestSteps - *****************************************************************
+10:28:23.923 100775 [main] INFO  com.qaconsultants.TestSteps - No ad displayed: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //iframe[contains(@name,'aswift') and contains(@style,'visibility: visible')]' (tried for 10 second(s) with 500 milliseconds interval)
+10:28:23.923 100775 [main] INFO  com.qaconsultants.TestSteps - *****************************************************************
+10:28:23.923 100775 [main] INFO  pages.Payment - *****************************************************************
+10:28:23.923 100775 [main] INFO  pages.Payment - Payment Page entered
+10:28:24.029 100881 [main] INFO  pages.Payment - Card Name entered
+10:28:24.104 100956 [main] INFO  pages.Payment - Card Number entered
+10:28:24.198 101050 [main] INFO  pages.Payment - Card CVC number entered
+10:28:24.261 101113 [main] INFO  pages.Payment - Card expiry month entered
+10:28:24.326 101178 [main] INFO  pages.Payment - Card expiry year entered
+10:28:26.282 103134 [main] INFO  pages.Payment - Pay and Confirm Button clicked
+10:28:26.282 103134 [main] INFO  pages.Payment - Payment Page end
+10:28:26.282 103134 [main] INFO  pages.Payment - *****************************************************************
+10:28:41.950 118802 [main] INFO  com.qaconsultants.TestSteps - *****************************************************************
+10:28:41.951 118803 [main] INFO  com.qaconsultants.TestSteps - No ad displayed: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //iframe[contains(@name,'aswift') and contains(@style,'visibility: visible')]' (tried for 10 second(s) with 500 milliseconds interval)
+10:28:41.951 118803 [main] INFO  com.qaconsultants.TestSteps - *****************************************************************
+10:29:48.699 1078 [main] DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome=112 in cache (valid until 11:26:45 24/04/2023 EDT)
+10:29:48.705 1084 [main] DEBUG i.g.b.wdm.cache.ResolutionCache - Resolution chrome112=112.0.5615.49 in cache (valid until 10:26:45 25/04/2023 EDT)
+10:29:48.706 1085 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Using chromedriver 112.0.5615.49 (resolved driver for Chrome 112)
+10:29:48.744 1123 [main] DEBUG i.g.bonigarcia.wdm.WebDriverManager - Driver chromedriver 112.0.5615.49 found in cache
+10:29:48.746 1125 [main] INFO  i.g.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\kkaswan\.cache\selenium\chromedriver\win32\112.0.5615.49\chromedriver.exe
+10:30:07.384 19763 [main] INFO  com.qaconsultants.TestSteps - *****************************************************************
+10:30:07.384 19763 [main] INFO  com.qaconsultants.TestSteps - No ad displayed: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //iframe[contains(@name,'aswift') and contains(@style,'visibility: visible')]' (tried for 10 second(s) with 500 milliseconds interval)
+10:30:07.384 19763 [main] INFO  com.qaconsultants.TestSteps - *****************************************************************
+10:30:08.661 21040 [main] INFO  pages.LogIn - *****************************************************************
+10:30:08.661 21040 [main] INFO  pages.LogIn - Login Page entered
+10:30:08.767 21146 [main] INFO  pages.LogIn - Email entered
+10:30:08.888 21267 [main] INFO  pages.LogIn - Password entered
+10:30:12.417 24796 [main] INFO  pages.LogIn - Login Button clicked
+10:30:28.100 40479 [main] INFO  com.qaconsultants.TestSteps - *****************************************************************
+10:30:28.100 40479 [main] INFO  com.qaconsultants.TestSteps - No ad displayed: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //iframe[contains(@name,'aswift') and contains(@style,'visibility: visible')]' (tried for 10 second(s) with 500 milliseconds interval)
+10:30:28.100 40479 [main] INFO  com.qaconsultants.TestSteps - *****************************************************************
+10:30:45.381 57760 [main] INFO  com.qaconsultants.TestSteps - *****************************************************************
+10:30:45.381 57760 [main] INFO  com.qaconsultants.TestSteps - No ad displayed: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //iframe[contains(@name,'aswift') and contains(@style,'visibility: visible')]' (tried for 10 second(s) with 500 milliseconds interval)
+10:30:45.381 57760 [main] INFO  com.qaconsultants.TestSteps - *****************************************************************
+10:30:45.396 57775 [main] INFO  pages.Product - *****************************************************************
+10:30:45.396 57775 [main] INFO  pages.Product - Product Page entered
+10:30:45.506 57885 [main] INFO  pages.Product - Wrote product to be searched in search bar
+10:30:47.218 59597 [main] INFO  pages.Product - Clicked the search button on product page
+10:30:48.790 61169 [main] INFO  pages.Product - Added product in the cart
+10:30:50.016 62395 [main] INFO  pages.Product - Leaving product page
+10:30:50.016 62395 [main] INFO  pages.Product - *****************************************************************
+10:31:05.663 78042 [main] INFO  com.qaconsultants.TestSteps - *****************************************************************
+10:31:05.663 78042 [main] INFO  com.qaconsultants.TestSteps - No ad displayed: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //iframe[contains(@name,'aswift') and contains(@style,'visibility: visible')]' (tried for 10 second(s) with 500 milliseconds interval)
+10:31:05.663 78042 [main] INFO  com.qaconsultants.TestSteps - *****************************************************************
+10:31:07.204 79583 [main] INFO  pages.Checkout - *****************************************************************
+10:31:07.204 79583 [main] INFO  pages.Checkout - Checkout Page entered
+10:31:08.248 80627 [main] INFO  pages.Checkout - Leaving Checkout Page
+10:31:08.248 80627 [main] INFO  pages.Checkout - *****************************************************************
+10:31:23.923 96302 [main] INFO  com.qaconsultants.TestSteps - *****************************************************************
+10:31:23.923 96302 [main] INFO  com.qaconsultants.TestSteps - No ad displayed: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //iframe[contains(@name,'aswift') and contains(@style,'visibility: visible')]' (tried for 10 second(s) with 500 milliseconds interval)
+10:31:23.923 96302 [main] INFO  com.qaconsultants.TestSteps - *****************************************************************
+10:31:23.923 96302 [main] INFO  pages.Payment - *****************************************************************
+10:31:23.923 96302 [main] INFO  pages.Payment - Payment Page entered
+10:31:24.048 96427 [main] INFO  pages.Payment - Card Name entered
+10:31:24.111 96490 [main] INFO  pages.Payment - Card Number entered
+10:31:24.205 96584 [main] INFO  pages.Payment - Card CVC number entered
+10:31:24.275 96654 [main] INFO  pages.Payment - Card expiry month entered
+10:31:24.331 96710 [main] INFO  pages.Payment - Card expiry year entered
+10:31:26.267 98646 [main] INFO  pages.Payment - Pay and Confirm Button clicked
+10:31:26.267 98646 [main] INFO  pages.Payment - Payment Page end
+10:31:26.267 98646 [main] INFO  pages.Payment - *****************************************************************
+10:31:41.925 114304 [main] INFO  com.qaconsultants.TestSteps - *****************************************************************
+10:31:41.925 114304 [main] INFO  com.qaconsultants.TestSteps - No ad displayed: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //iframe[contains(@name,'aswift') and contains(@style,'visibility: visible')]' (tried for 10 second(s) with 500 milliseconds interval)
+10:31:41.925 114304 [main] INFO  com.qaconsultants.TestSteps - *****************************************************************

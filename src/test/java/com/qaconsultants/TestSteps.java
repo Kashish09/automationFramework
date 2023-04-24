@@ -177,13 +177,14 @@ public class TestSteps{
     public void cleanup() {
         if (driverManager.getDriver() != null) {
 //            driverManager.getDriver().close();
-            try {
-                Thread.sleep(2000);
-            } catch (InterruptedException e) {
-                log.info("*****************************************************************");
-                log.info("Error closing the webdriver: " + e);
-                log.info("*****************************************************************");
-            }
+//            try {
+////                wait(2000);
+////                Thread.sleep(2000);
+//            } catch (InterruptedException e) {
+//                log.info("*****************************************************************");
+//                log.info("Error closing the webdriver: " + e);
+//                log.info("*****************************************************************");
+//            }
             driverManager.getDriver().quit();
         }
     }
