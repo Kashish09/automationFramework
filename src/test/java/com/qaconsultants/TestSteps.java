@@ -66,7 +66,7 @@ public class TestSteps{
             log.info("*****************************************************************");
         }
         String loggedUserName = login.loggedUserNameVisible();
-        Assert.assertEquals(loggedUserName, "Logged in as qwerty123");
+        Assert.assertEquals("Logged in as qwerty123", loggedUserName);
 
     }
 
@@ -129,7 +129,7 @@ public class TestSteps{
     public void user_is_redirected_to_payments_page_after_placing_order() {
         payment = new Payment(driverManager.getDriver());
         String name = payment.getPageName();
-        Assert.assertEquals(name, "Payment");
+        Assert.assertEquals("Payment", name);
     }
 
     @Then("user is able to fill the card details")
